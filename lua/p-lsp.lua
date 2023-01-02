@@ -21,7 +21,8 @@ local on_attach = function(_, bufnr, isTsserver)
       if isTsserver == true then
         require('typescript').actions.removeUnused({ sync = true })
       end
-      vim.lsp.buf.format()
+      --vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+
     end
   })
 end

@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
 
+  use('MunifTanjim/prettier.nvim')
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
   use {
