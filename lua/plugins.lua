@@ -3,6 +3,10 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
+  use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
@@ -14,10 +18,7 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly'
   }
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
+
 
   use('MunifTanjim/prettier.nvim')
   use 'windwp/nvim-autopairs'
@@ -58,6 +59,7 @@ return require('packer').startup(function(use)
     }
   })
   use 'norcalli/nvim-colorizer.lua'
+
   use({
     'akinsho/toggleterm.nvim',
     tag = '*'
@@ -67,7 +69,6 @@ return require('packer').startup(function(use)
   use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
   use("APZelos/blamer.nvim")
   use("nvim-tree/nvim-tree.lua")
-    -- lazygit
   use {
     'kdheepak/lazygit.nvim',
     config = function()
